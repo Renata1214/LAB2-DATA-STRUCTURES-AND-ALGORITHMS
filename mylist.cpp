@@ -54,7 +54,7 @@ int List::size ()const{
 void List::print ()const{
     Node * temp = Head_List;
     while (temp !=nullptr){
-        cout << "("<< &temp << ") ";
+        cout << "(" << temp -> instance.name  << ") ";
          temp = temp -> next_link;
     }
 }
