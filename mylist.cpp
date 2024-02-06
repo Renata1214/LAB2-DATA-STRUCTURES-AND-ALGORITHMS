@@ -2,11 +2,12 @@
 #include "mylist.h"
 #include <iostream>
 
+//Ask whether the names are supposed to be given to the node or to the payload objects.
+
 using std::string;
 using std::cout;
 
 //Node initializer
-
 Node:: Node (string n){
     instance = n;
     next_link = nullptr;
@@ -58,4 +59,5 @@ void List::print ()const{
          temp = temp -> next_link;
     }
 }
+
 

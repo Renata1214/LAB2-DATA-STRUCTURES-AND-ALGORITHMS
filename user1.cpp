@@ -27,28 +27,8 @@ auto showList = [](const List & s)
  s.pop_front();
  showList(s);
  }
+
+
+ 
 }
 
-/*Output:
-List size: 3
-List size: 2
-
-
-
-int main()
-{
- {
- List s;
- s.push_front("apple");
- s.push_front("pear");
- s.pop_front();
- }
-}
-
-
-int main()
-{
- Vector v;
- List s;
-}
-*/
