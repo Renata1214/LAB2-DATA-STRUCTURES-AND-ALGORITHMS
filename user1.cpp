@@ -1,6 +1,6 @@
 #include <iostream>
 //#include "mylistChat.h"
-#include "myvector.h"
+//#include "myvector.h"
 #include "mylist.h"
 using std::cout;
 
@@ -27,27 +27,43 @@ auto showList = [](const List & s)
  showList(s);
  s.pop_front();
  showList(s);
+ cout << "Now push back" << '\n';
+s.push_back("myfruit");
+showList(s);
+s.pop_back();
+showList(s);
+s.push_back("myfruit");
+showList(s);
+s.pop_back();
+showList(s);
+s.push_back("myfruit3");
+showList(s);
+s.push_back("myfruit4");
+showList(s);
+s.push_back("myfruit5");
+showList(s);
+s[2].print() ;
  }
 
- auto showVector = [](const Vector & v)
- {
- cout << "Vector size/capacity: " << v.size() << '/' <<
-v.capacity() << '\n';
- v.print();
- cout << '\n';
- };
+//  auto showVector = [](const Vector & v)
+//  {
+//  cout << "Vector size/capacity: " << v.size() << '/' <<
+// v.capacity() << '\n';
+//  v.print();
+//  cout << '\n';
+//  };
 
 
- {
- Vector v;
- v.push_back("apple");
-showVector(v);
-v.push_back("pear");
-v.push_back("banana");
-showVector(v);
-v.pop_back();
-showVector(v);
- }
+//  {
+//  Vector v;
+//  v.push_back("apple");
+// showVector(v);
+// v.push_back("pear");
+// v.push_back("banana");
+// showVector(v);
+// v.pop_back();
+// showVector(v);
+//  }
  
 }
 

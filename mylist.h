@@ -6,12 +6,10 @@ using std::string;
 struct Node
 {
 //Members of the structure
-    Payload *instance;
+    Payload instance;
     Node *next_link;
 //Constructor
-    Node (const std::string& n);
-//Destructor
-    ~Node();
+    Node (Payload n);
 };
 
 struct List
@@ -23,10 +21,15 @@ List ();
 //Destructor
 ~List();
 //Deleting and adding Nodes to list
-void push_front (const std::string& name);
+void push_front (const Payload& name);
 void pop_front ();
+void push_back (const Payload& name);
+void pop_back ();
 //Size
 int size()const;
 //Print
 void print () const;
+
+Payload& operator[](int i);
+
 };

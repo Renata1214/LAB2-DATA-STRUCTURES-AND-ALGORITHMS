@@ -8,15 +8,10 @@ using std::string;
 using std::cout;
 
 //Node initializer
-Node:: Node (const std::string& n){
-    instance = new Payload (n);
+Node:: Node (Payload n){
+    instance = (n);
     next_link = nullptr;
 }
-
-//Node destructor
-Node::~Node() {
-        delete instance; // Deallocate the Payload object
-    }
 
 List :: List (){
     Head_List= nullptr;
@@ -31,7 +26,7 @@ List::~List (){
 };  
 
 //Push front
-void List::push_front (const std::string& name){
+void List::push_front (const Payload& name){
     Node *newNode= new Node (name); //Ask if i need a variable or if i can just declare it inside the function
     newNode->next_link= Head_List;
     Head_List = newNode;
@@ -48,6 +43,35 @@ void List::pop_front (){
     Head_List = temp;}
 }
 
+
+//Push Back
+
+void List::push_back (const Payload& name){
+     Node * tale = Head_List;
+    while (tale->next_link!=nullptr){
+        tale=tale ->next_link;
+    }
+    Node *newNode= new Node (name);
+    tale->next_link=newNode;
+}
+
+//Pop back
+void List::pop_back(){
+    if(Head_List == nullptr){
+        cout << "No elements inside the list" << '\n';
+    }
+    else{
+    Node * tale = Head_List;
+   // iterator = Head_List -> next_link;
+    while (tale->next_link->next_link!=nullptr){
+        tale=tale ->next_link;
+    }
+    delete tale->next_link;
+    tale -> next_link = nullptr;}
+
+}
+
+
 //size, not as a variable.
 int List::size ()const{
     int counter =0;
@@ -63,8 +87,19 @@ int List::size ()const{
 void List::print ()const{
     Node * temp = Head_List;
     while (temp !=nullptr){
-        temp -> instance->print();
+        temp->instance.print();
          temp = temp -> next_link;
     }
 }
+
+//Operator
+Payload& List::operator[](int i) {
+Node * iterator = Head_List;
+for (int j=0; j<i;j++){
+    iterator= iterator ->next_link;
+}
+
+return (iterator->instance);
+}
+
 
