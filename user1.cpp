@@ -1,6 +1,8 @@
 #include <iostream>
-#include "myvector.h"
-#include "mylist.h"
+#include "mylistChat.h"
+
+//#include "myvector.h"
+//#include "mylist.h"
 using std::cout;
 
 
@@ -28,25 +30,25 @@ auto showList = [](const List & s)
  showList(s);
  }
 
- auto showVector = [](const Vector & v)
- {
- cout << "Vector size/capacity: " << v.size() << '/' <<
-v.capacity() << '\n';
- v.print();
- cout << '\n';
- };
+//  auto showVector = [](const Vector & v)
+//  {
+//  cout << "Vector size/capacity: " << v.size() << '/' <<
+// v.capacity() << '\n';
+//  v.print();
+//  cout << '\n';
+//  };
 
 
- {
- Vector v;
- v.push_back("apple");
-showVector(v);
-v.push_back("pear");
-v.push_back("banana");
-showVector(v);
-v.pop_back();
-showVector(v);
- }
+//  {
+//  Vector v;
+//  v.push_back("apple");
+// showVector(v);
+// v.push_back("pear");
+// v.push_back("banana");
+// showVector(v);
+// v.pop_back();
+// showVector(v);
+//  }
  
 }
 
