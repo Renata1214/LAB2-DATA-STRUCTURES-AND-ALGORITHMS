@@ -95,7 +95,7 @@ void List::print ()const{
 //Operator
 Payload& List::operator[](int i) {
 Node * iterator = Head_List;
-for (int j=0; j<i;j++){
+for (int j=0; j<i+1;j++){
     iterator= iterator ->next_link;
 }
 
