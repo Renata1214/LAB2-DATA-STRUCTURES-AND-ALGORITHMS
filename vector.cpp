@@ -73,7 +73,7 @@ Vector::Vector (){
     }
 
 //Vector Operator overload
-Payload Vector::operator[](int i){
+Payload& Vector::operator[](int i){
     return Objects[i];
 }
 

@@ -33,7 +33,7 @@ void push_front (const Payload &name);
 void pop_front ();
 
 //vector Operator Overload.
-Payload operator[](int i) ;
+Payload& operator[](int i) ;
 
 //Vector Size
 int size () const;
